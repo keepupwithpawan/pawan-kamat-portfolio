@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawan Kamat | 3D</title>
+    <link rel="shortcut icon" href="/images/pa1..png" type="image/x-icon">
+    <link rel="stylesheet" href="sphere.css">
+    <script src="https://kit.fontawesome.com/4b1022cf8e.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+</head>
+
+<body>
+    <div id="cursor" class="Cursor"></div>
+
+    <div id="nav-container">
+        <div id="nav-bar">
+            <div id="name">
+                <p id="home-link">pa1.</p>
+            </div>
+
+            <div id="ul-container">
+                <ul>
+                    <li id="projects">Work</li>
+                    <li id="about">About</li>
+                    <li id="resume">Resume</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="main-container">
+        <div id="banner">
+            <img src="/images/banner-bg-purple.jpg" alt="">
+            <div id="left">
+                <h1 id="sphere">3D 🌐</h1>
+            </div>
+            <div id="right">
+                <div id="pills-1" class="pills-container">
+                    <div class="pill">HTML</div>
+                    <div class="pill">CSS</div>
+                    <div class="pill">Javascript</div>
+                    <div class="pill">Spline 3D</div>
+                </div>
+                <!-- <div id="pills-2" class="pills-container">
+                    <div class="pill">PHP</div>
+                    <div class="pill">MySQL</div>
+                    <div class="pill">PHPMyAdmin</div>
+                </div> -->
+            </div>
+        </div>
+        <!-- 
+        <div id="video">
+            <video src="/images/BFB-Video.mp4" autoplay loop muted></video>
+        </div> -->
+
+        <div id="info">
+            <h2 class="fancy">WHAT I DID</h2>
+            <p>These are two of my 3D models, a stress ball and a keyboard. Stress Ball is one of my earliest projects developed when I was exploring 3D deisgn using Spline. It was developed as a tool that mimics the functioning of a Stress Ball that peoplewith short temper, anxiety use while driving.
+            <br>
+            <br>
+            It is a 3D sphere that can be rotated using the mouse and expands many smallers spheres from the center to out to give a feel of a stress ball. The project was developed using HTML, CSS and Javascript. The 3D sphere was developed using Spline 3D.
+            <br>
+            <br>
+            Keyboard is a small 3D model of a keyboard that was developed using Spline 3D. The keyboard reacts to key presses and displays the status of the key being pressed live on the web.
+            </p>
+        </div>
+
+        <div class="grid-item bridgeForBetter" id="video-container">
+            <video src="/images/3d radiating sphere - Trim.mp4" autoplay loop muted></video>
+            <video src="/images/Keyboard - Trim.mp4" autoplay loop muted></video>
+        </div>
+
+        <div id="main-container-2" class="main-container-class">
+            <div class="bento-grid">
+                <div class="grid-item small-item gitaGpt" id="photo-3">
+                    <div class="overlay-text">
+                        Stress Ball
+                    </div>
+                </div>
+
+                <div class="grid-item small-item mySpace" id="photo-4">
+                    <div class="overlay-text">
+                        3D Keyboard
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="see-more">
+            <h2 class="fancy">SEE MORE WORK</h2>
+            <div id="img-container">
+                <img src="/images/BridgeForBetter-mockup.png" alt="" id="bridgeForBetter">
+                <img src="/images/breather-mockup.png" alt="" id="breather">
+                <img src="/images/gitagpt-mockup.png" alt="" id="gitagpt">
+                <img src="/images/MySpace-mockup.png" alt="" id="myspace">
+                <img src="/images/voting-mockup.png" alt="" id="voting">
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container">
+        <div id="footer-item-left">
+            <p>2024 &copy; Pawan Kamat</p>
+            <p id="developed-by">Developed with sass by <span>pa1.</span></p>
+        </div>
+        <div id="footer-item-right">
+            <ul>
+                <li id="linkedin">LinkedIn</li>
+                <li id="twitter">Twitter</li>
+                <li id="whatsapp">WhatsApp</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script/bridge-for-better.js"></script>
+    <script>
+        const researchPaper = document.querySelector('.research-paper');
+
+        researchPaper.addEventListener("click", function () {
+            window.open("https://tinyurl.com/Gita-GPT-pdf", "_blank");
+        });
+    </script>
+</body>
+
+</html>
