@@ -138,7 +138,7 @@ body > #main-container-1 {
     height: 98vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
     border-radius: 20px;
     /* background-color: red; */
 }
@@ -159,21 +159,48 @@ body > #main-container-1 > #main-container-1-content > h1 {
     text-shadow: 2px 2px 4px #FFC600;   
 }
 
-body > #main-container-1 > #main-container-1-content > p {
+body > #main-container-1 > #main-container-1-content > h2 {
+    font-family: Bebas;
+    font-size: 50px;
+    background: none;
+    color: #FFC600;
+}
+
+body > #main-container-1 > #main-container-1-content > #socials {
+    width: 8%;
+    margin: 5vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+body > #main-container-1 > #main-container-1-content > #socials > i {
+    cursor: pointer;
+    color: #571F4E
+}
+
+body > #main-container-1 > #main-container-1-content > #socials > i:hover {
+    color: #FFC600;
+}
+
+body > #main-container-1 > p {
     font-family: Bebas;
     font-size: 30px;
     background: none;
     color: #571F4E;
 }
 
-body > #main-container-1 > #main-container-1-content > p > .bold-data {
+#dynamic-info {
+    margin-left: 2vw;
+}
+
+body > #main-container-1 > p > .bold-data {
     cursor: crosshair;
     font-family: Bebas;
     font-weight: bold;
     position: relative;
 }
 
-body > #main-container-1 > #main-container-1-content > p > .bold-data:hover {
+body > #main-container-1 > p > .bold-data:hover {
     color: #FFC600;
 }
 

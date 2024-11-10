@@ -1,8 +1,11 @@
 const circle = document.getElementById('circle');
 const youtube = document.getElementById('youtube');
 const linkedin = document.getElementById('linkedin');
+const faLinkedin = document.getElementById('fa-linkedin');
 const twitter = document.getElementById('twitter');
+const faTwitter = document.getElementById('fa-square-x-twitter');
 const whatsapp = document.getElementById('whatsapp');
+const faInstagram = document.getElementById('fa-square-instagram');
 const notion = document.getElementById('duo-tone-graphic');
 const gallery = document.getElementById('expand-arrow');
 const contact = document.getElementById('contact-arrow');
@@ -57,6 +60,18 @@ about.addEventListener("click", function () {
 
 projects.addEventListener("click", function () {
     window.open('projects.html', '_blank');
+});
+
+faLinkedin.addEventListener("click", function () {
+    window.open("https://www.linkedin.com/in/pawankamat/", "_blank");
+});
+
+faTwitter.addEventListener("click", function () {
+    window.open("https://x.com/keepupwithpa1", "_blank");
+});
+
+faInstagram.addEventListener("click", function () {
+    window.open("https://www.instagram.com/keepupwithpawan/", "_blank");
 });
 
 // Function to fetch user's system time
