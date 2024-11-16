@@ -160,6 +160,7 @@ body > #main-container-1 > #main-container-1-content > h1 {
 }
 
 body > #main-container-1 > #main-container-1-content > h2 {
+    margin-top: -5vh;
     font-family: Bebas;
     font-size: 50px;
     background: none;
@@ -167,7 +168,7 @@ body > #main-container-1 > #main-container-1-content > h2 {
 }
 
 body > #main-container-1 > #main-container-1-content > #socials {
-    width: 8%;
+    width: 10%;
     margin: 5vh 0;
     display: flex;
     justify-content: space-between;
