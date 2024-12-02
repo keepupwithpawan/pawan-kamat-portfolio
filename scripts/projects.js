@@ -10,6 +10,11 @@ window.addEventListener('load', () => {
     document.body.style.opacity = 1; // Fade the body from opacity 0 to 1
 });
 
+window.addEventListener('focusin', () => {
+    document.body.style.transition = 'opacity 0.5s ease'; // Set the transition for opacity
+    document.body.style.opacity = 1; // Fade the body from opacity 0 to 1
+});
+
 window.addEventListener('beforeunload', () => {
     document.body.style.transition = 'opacity 0.5s ease'; // Smooth opacity transition
     document.body.style.opacity = 0; // Fade the body from opacity 1 to 0
