@@ -18,6 +18,9 @@ window.addEventListener('focusin', () => {
 window.addEventListener('beforeunload', () => {
     document.body.style.transition = 'opacity 0.5s ease'; // Smooth opacity transition
     document.body.style.opacity = 0; // Fade the body from opacity 1 to 0
+    setTimeout(() => {
+        document.body.style.opacity = 1; // Fade the body from opacity 1 to 0
+    }, 500);
 });
 
 gitaGpt.addEventListener('click', () => {
