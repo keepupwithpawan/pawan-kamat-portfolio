@@ -32,7 +32,7 @@ gitaGpt.addEventListener('click', () => {
     document.body.style.opacity = 0;
 
     setTimeout(() => {
-        location.href = 'https://gita-gpt-gold.vercel.app/';
+        window.open("https://gita-gpt-gold.vercel.app/", "_blank");
     }, 500);
 });
 
@@ -41,7 +41,7 @@ webstyle.addEventListener('click', () => {
     document.body.style.opacity = 0;
 
     setTimeout(() => {
-        location.href = 'https://web-style-one.vercel.app/index.html';
+        window.open("https://web-style-one.vercel.app/index.html", "_blank");
     }, 500);
 });
 
@@ -50,7 +50,7 @@ breather.addEventListener('click', () => {
     document.body.style.opacity = 0;
 
     setTimeout(() => {
-        location.href = 'https://breather-29161.web.app/';
+        window.open("https://breather-29161.web.app/", "_blank");
     }, 500);
 });
 
@@ -59,7 +59,7 @@ researchPaper.addEventListener('click', () => {
     document.body.style.opacity = 0;
 
     setTimeout(() => {
-        location.href = 'https://ijsrem.com/download/from-traditional-to-digital-evaluating-the-role-of-spirituality-in-mental-health-and-therapy/';
+        window.open("https://ijsrem.com/download/from-traditional-to-digital-evaluating-the-role-of-spirituality-in-mental-health-and-therapy/", "_blank");
     }, 500);
 });
 
@@ -68,7 +68,7 @@ github.addEventListener('click', () => {
     document.body.style.opacity = 0;
 
     setTimeout(() => {
-        location.href = 'https://github.com/keepupwithpawan';
+        window.open("https://github.com/keepupwithpawan", "_blank");
     }, 500);
 });
 
