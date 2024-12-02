@@ -10,11 +10,15 @@ window.addEventListener('load', () => {
     document.body.style.opacity = 1; // Fade the body from opacity 0 to 1
 });
 
-window.addEventListener('focusin', () => {
-    document.body.style.transition = 'opacity 0.5s ease'; // Set the transition for opacity
-    document.body.style.opacity = 1; // Fade the body from opacity 0 to 1
+// Reset opacity when the page becomes visible after switching tabs or re-focusing
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = 1; // Reset opacity to 1 when the tab is visible
+    }
 });
 
+// Smooth opacity fade-out effect before unloading
 window.addEventListener('beforeunload', () => {
     document.body.style.transition = 'opacity 0.5s ease'; // Smooth opacity transition
     document.body.style.opacity = 0; // Fade the body from opacity 1 to 0
