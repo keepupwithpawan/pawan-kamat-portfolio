@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pawan Kamat | Developer | Programmer</title>
+    <link rel="shortcut icon" href="/images/pa1..png" type="image/x-icon">
+    <link rel="stylesheet" href="/styles/experience.css" />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500&f[]=zodiak@800&f[]=gambarino@400&f[]=sentient@400&f[]=melodrama@400&f[]=dancing-script@700&f[]=satoshi@300,400&f[]=general-sans@400&f[]=switzer@300&f[]=pencerio@50&f[]=bonny@400&f[]=aktura@400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="grid-layout" class="section">
+      <div class="grid-container">
+        <div class="grid-item item1" id="gita-gpt">
+          <div class="top"></div>
+
+          <div class="bottom">
+            <div class="project-name">
+              <h4>Directed By Them Projects</h4>
+              <p>Co-Founder (Feb 2024 - Present)</p>
+            </div>
+            <div id="desc">
+              DirectedByThem is a project that we started to capture raw moments
+              from our life and present them to you as films that you can enjoy
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item item2" id="webstyle">
+          <div class="top"></div>
+
+          <div class="bottom">
+            <div class="project-name">
+              <h4>Anzen Technologies</h4>
+              <p>Web Development Intern (Jun 2023 - Sep 2023)</p>
+            </div>
+            <div id="desc">
+              Worked as a Full-Stack Development Intern, developing a pagination
+              model, a full-stack blog website with an admin panel, and an
+              e-commerce site with cart functionality
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item item3" id="resume"></div>
+
+        <div class="grid-item item4" id="breather">
+          <div class="top"></div>
+
+          <div class="bottom">
+            <div class="project-name">
+              <h4>MyCaptain</h4>
+              <p>Campus Ambassador (May 2023 - May 2023)</p>
+            </div>
+            <div id="desc">
+              As a campus ambassador I was heavily invested in marketing and
+              sales for the various educational courses offered by MyCaptain
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-item item5">
+          <div id="left">
+            © 2024 Pawan Kamat. All Rights Reserved.
+            <br />
+            <span>Made with ❤ by pa1.</span>
+          </div>
+          <div id="right">
+            Present - Computer Engineering at SIES-GST.
+            <br />
+            <span id="time"></span>
+          </div>
+        </div>
+
+        <div class="grid-item item6">
+          <!-- <span>P</span>ROJECT<span>S</span> -->
+          <div id="right">
+            <div id="paper-name">
+              <h4>Education</h4>
+            </div>
+            <div id="links">
+              <div class="website">
+                <p>SIES Graduate School of Technology (Dec 2021 - Present)</p>
+              </div>
+              <div class="website">
+                <p>Royal Junior College (Aug 2019 - May 2021)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="/scripts/projects.js"></script>
+    <script>
+      const resume = document.getElementById("resume");
+
+      resume.addEventListener("click", () => {
+        document.body.style.transition = "opacity 0.5s ease";
+        document.body.style.opacity = 0;
+
+        setTimeout(() => {
+          location.href =
+            "https://drive.google.com/file/d/1mLNzuuwm-Pr8Yk1gc2yt5tekozrhxrx3/view?usp=sharing";
+        }, 500);
+      });
+
+      //Footer Time
+      async function fetchLocation() {
+        try {
+          const response = await fetch("https://ipapi.co/json/");
+          if (!response.ok) throw new Error("Failed to fetch location");
+          const data = await response.json();
+          return data.country_name; // Get country name
+        } catch (error) {
+          console.error(error);
+          return "Unknown"; // Fallback in case of an error
+        }
+      }
+
+      function updateTime(country) {
+        const timeElement = document.getElementById("time");
+        const now = new Date();
+
+        // Format the time as HH:MM:SS
+        const hours = String(now.getHours()).padStart(2, "0");
+        const minutes = String(now.getMinutes()).padStart(2, "0");
+        const seconds = String(now.getSeconds()).padStart(2, "0");
+
+        // Display country and time together
+        timeElement.textContent = `${country} - ${hours}:${minutes}:${seconds}`;
+      }
+
+      async function initialize() {
+        const country = await fetchLocation(); // Fetch user's country
+        updateTime(country); // Update time with the country immediately
+        setInterval(() => updateTime(country), 1000); // Update every second
+      }
+
+      // Initialize the location and time update
+      initialize();
+    </script>
+  </body>
+</html>

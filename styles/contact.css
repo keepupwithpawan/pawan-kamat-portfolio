@@ -1,0 +1,221 @@
+/* Color Codes: Blue: #1b1f3b, Yellow: #ECD444, White: #EFF7FF, Green: #004F2D, Accent Blue: #1D7874, Black #000500 */
+
+@font-face {
+    font-family: Bebas;
+    src: url("/fonts/BebasNeue-Regular.ttf");
+}
+
+:root {
+    --Black: #000500;
+    --Blue: #1b1f3b;
+    --Yellow: #FFC600;
+    --White: #EFF7FF;
+    --Green: #004F2D;
+    --AccentBlue: #1D7874;
+    --Charcoal: #36454F;
+    --Melon: #FEBAAD
+}
+
+.grid-item {
+    position: relative; /* Ensure the trails are relative to each grid item */
+}
+  
+.trail-wrapper {
+    overflow: hidden;
+    scrollbar-width: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: none; /* Hide by default */
+}
+  
+.trail {
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    pointer-events: none;
+    opacity: 1;
+    transition: transform 0.1s ease, opacity 0.5s ease;
+    z-index: 2;
+}
+  
+.grid-item:hover .trail-wrapper {
+    display: block; /* Show trails when the grid item is hovered */
+}  
+
+@keyframes wavySwirl {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Switzer', sans-serif;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    /* scrollbar-width: none; */
+}
+
+body {
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    opacity: 0; 
+    transition: opacity 0.5s ease; 
+    background-color: var(--Black);
+}
+
+body > #main-container {
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: red; */
+}
+
+body > #main-container > #contact-container {
+    overflow: hidden;
+    width: 99%;
+    height: 74%;
+    margin: 6px 0 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--White);
+    color: var(--White);
+}
+
+body > #main-container > #contact-container > #left {
+    overflow: hidden;
+    height: 55vh;
+    background: none;
+    margin-left: 2%;
+    margin-right: 2vw;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+body > #main-container > #contact-container > #left > h2 {
+    overflow: hidden;
+    color: var(--Black);
+    font-family: Bebas, sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+body > #main-container > #contact-container > #left > input, textarea {
+    background: none;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: none;
+    border-bottom: 1px solid var(--Black);
+    background-color: transparent;
+    outline: none;
+    font-family: Bebas, sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+body > #main-container > #contact-container > #left > textarea {
+    background: none;
+    resize: none;
+    height: 100px;
+}
+
+body > #main-container > #contact-container > #left > input::placeholder, #left textarea::placeholder {
+    background: none;
+}
+
+body > #main-container > #contact-container > #left > .send-button {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    margin-top: 2vh;
+    width: 30%;
+    text-align: left;
+    padding: 15px;
+    text-align: center;
+    background-color: var(--Black);
+    color: var(--White);
+    font-family: Bebas, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-radius 0.3s;
+}
+
+body > #main-container > #contact-container > #left > .send-button:hover {
+    background-color: var(--White);
+    border: 1px solid var(--Black);
+    color: var(--Black);
+}
+
+body > #main-container > #contact-container > #right {
+    width: 45%;
+    height: 57vh;
+    background: none;
+    margin-left: 3vw;
+    margin-right: 2%;
+    background: url('/images/contact-img.png') no-repeat center center;
+    background-size: cover;
+}
+
+body > #main-container > #footer-container {
+    width: 99%;
+    height: 23%;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #141414;
+}
+
+body > #main-container > #footer-container > #left {
+    margin-left: 2%;
+    font-family: Bebas, sans-serif;
+    font-size: 22px;
+    color: var(--White);
+}
+
+body > #main-container > #footer-container > #left > span {
+    font-family: Bebas, sans-serif;
+    font-size: 17px;
+    opacity: 70%;
+}
+
+body > #main-container > #footer-container > #right {
+    margin-right: 2%;
+    text-align: right;
+    font-family: Bebas, sans-serif;
+    font-size: 22px;
+    color: var(--White);
+}
+
+body > #main-container > #footer-container > #right > span {
+    font-family: Bebas, sans-serif;
+    font-size: 17px;
+    opacity: 70%;
+}
