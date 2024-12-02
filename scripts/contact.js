@@ -4,6 +4,13 @@ window.addEventListener('load', () => {
     document.body.style.opacity = 1; // Fade the body from opacity 0 to 1
 });
 
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = 1; // Reset opacity to 1 when the tab is visible
+    }
+});
+
 window.addEventListener('beforeunload', () => {
     document.body.style.transition = 'opacity 0.5s ease'; // Smooth opacity transition
     document.body.style.opacity = 0; // Fade the body from opacity 1 to 0

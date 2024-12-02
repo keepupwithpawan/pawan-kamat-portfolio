@@ -12,6 +12,13 @@ window.addEventListener('load', () => {
     document.body.style.opacity = 1; // Fade the body from opacity 0 to 1
 });
 
+document.addEventListener('visibilitychange', () => {
+    if (document.visibilityState === 'visible') {
+        document.body.style.transition = 'opacity 0.5s ease';
+        document.body.style.opacity = 1; // Reset opacity to 1 when the tab is visible
+    }
+});
+
 // Ensure smooth fade-in when navigating back to the page (using the back button)
 window.addEventListener('pageshow', (event) => {
     if (event.persisted) {  // Check if the page is loaded from cache
