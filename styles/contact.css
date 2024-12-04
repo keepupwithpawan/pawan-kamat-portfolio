@@ -115,11 +115,11 @@ body > #main-container > #contact-container > #left {
 
 
 body > #main-container > #contact-container > #left > h2 {
-    overflow: hidden;
+    overflow: visible;
     color: var(--Black);
     font-family: Bebas, sans-serif;
     font-size: 40px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 body > #main-container > #contact-container > #left > input, textarea {
@@ -175,7 +175,7 @@ body > #main-container > #contact-container > #left > .send-button:hover {
 
 body > #main-container > #contact-container > #right {
     width: 45%;
-    height: 57vh;
+    height: 55vh;
     background: none;
     margin-left: 3vw;
     margin-right: 2%;
@@ -218,4 +218,63 @@ body > #main-container > #footer-container > #right > span {
     font-family: Bebas, sans-serif;
     font-size: 17px;
     opacity: 70%;
+}
+
+/*Responsive design for mobile devices*/
+@media (max-width: 500px) {
+    body > #main-container > #contact-container {
+        flex-direction: column-reverse;
+        width: 97%;
+        justify-self: center;
+        align-items: center;
+    }
+
+    body > #main-container > #contact-container > #left {
+        width: 90%;
+        margin: 20px 0 0 0;
+    }
+
+    body > #main-container > #contact-container > #right {
+        width: 94%;
+        height: 40%;
+        margin: 15px 0 0 0;
+    }
+
+    body > #main-container > #contact-container > #left > .send-button {
+        margin-bottom: 20px;
+    }
+
+    body > #main-container > #footer-container > #left {
+        font-size: 17px;
+    }
+
+    body > #main-container > #footer-container > #left > span {
+        font-size: 14px;
+    }
+
+    body > #main-container > #footer-container > #right {
+        font-size: 17px;
+    }
+    
+    body > #main-container > #footer-container > #right > span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 650px) {
+    body > #main-container > #footer-container > #left {
+        font-size: 10px;
+    }
+    
+    body > #main-container > #footer-container > #left > span {
+        font-size: 10px;
+    }
+    
+    body > #main-container > #footer-container > #right {
+        font-size: 10px;
+    }
+    
+    body > #main-container > #footer-container > #right > span {
+        font-size: 10px;
+    }
 }
