@@ -556,6 +556,9 @@ body > #lander-container > #lander-content > ul > li > img {
         font-size: 90px;
     }
 
+    body > #lander-container > #lander-content > p {
+        font-size: 13px;
+    }
     
     #grid-layout > .grid-container > .item5 > #left {
         font-size: 10px;
