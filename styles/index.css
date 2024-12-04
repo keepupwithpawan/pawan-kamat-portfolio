@@ -490,6 +490,10 @@ body > #lander-container > #lander-content > ul > li > img {
         width: 70%;
     }
 
+    body > #lander-container > #lander-content > p {
+        font-size: 13px;
+    }
+
     #grid-layout > .grid-container {
         display: flex;
         flex-direction: column;
