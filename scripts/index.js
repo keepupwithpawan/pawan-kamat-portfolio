@@ -32,7 +32,7 @@ resume.addEventListener('click', () => {
     document.body.style.opacity = 0;
 
     setTimeout(() => {
-        location.href = 'https://drive.google.com/file/d/1mLNzuuwm-Pr8Yk1gc2yt5tekozrhxrx3/view?usp=sharing';
+        location.href = 'https://drive.google.com/file/d/1n0jaT7JcZGt3aWJdhuFFGIKgzpkG-U0-/view?usp=sharing';
     }, 500);
 });
 
