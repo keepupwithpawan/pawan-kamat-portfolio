@@ -1,5 +1,5 @@
 const gitaGpt = document.getElementById('gita-gpt');
-const webstyle = document.getElementById('webstyle');
+const vetra = document.getElementById('vetra');
 const breather = document.getElementById('breather');
 const researchPaper = document.getElementById('research-paper');
 const github = document.getElementById('github');
@@ -36,12 +36,12 @@ gitaGpt.addEventListener('click', () => {
     }, 500);
 });
 
-webstyle.addEventListener('click', () => {
+vetra.addEventListener('click', () => {
     document.body.style.transition = 'opacity 0.5s ease';
     document.body.style.opacity = 0;
 
     setTimeout(() => {
-        window.open("https://web-style-one.vercel.app/index.html", "_blank");
+        window.open("https://www.vetra.co.in", "_blank");
     }, 500);
 });
 
