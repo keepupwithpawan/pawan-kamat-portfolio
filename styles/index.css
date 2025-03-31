@@ -107,6 +107,7 @@ body {
     border-radius: 20px;
     transition: transform 0.1s ease-out, box-shadow 0.3s; /* Smooth transformation */
     will-change: transform; /* Hint to the browser to optimize the transform */
+    scrollbar-width: none;
 }
 
 #lander-content:hover {
@@ -118,6 +119,7 @@ body {
 
 body > #lander-container > #lander-content > h1, p {
     background: none;
+    scrollbar-width: none;
 }
 
 body > #lander-container > #lander-content > h1 {
@@ -602,4 +604,3 @@ body > #lander-container > #lander-content > ul > li > img {
         font-size: 10px;
     }
 }
-
