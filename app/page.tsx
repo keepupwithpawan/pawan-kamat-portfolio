@@ -14,17 +14,17 @@ export default function Home() {
   };
 
   return (
-    <div className='w-full h-screen flex flex-col items-center justify-center'>
+    <div className='w-full py-5 md:py-0 md:h-screen flex flex-col items-center justify-center'>
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.3 }}
-        className='w-[92%] h-[88%] flex justify-between gap-4 text-(--color-background)'
+        className='w-[92%] h-[88%] flex flex-col md:flex-row md:justify-between justify-center items-center gap-4 text-(--color-background)'
       >
         {/* COLUMN 1 */}
-        <div className='w-1/3 h-full gap-4 flex flex-col items-center justify-center'>
+        <div className='w-full md:w-1/3 h-full gap-4 flex flex-col items-center justify-center'>
           {/* Profile Card (keep custom) */}
-          <div className='w-full h-[60%] relative group rounded-lg overflow-hidden flex flex-col justify-end'>
+          <div className='w-full h-[500px] md:h-[60%] relative group rounded-lg overflow-hidden flex flex-col justify-end'>
             <div className="absolute inset-0 bg-[url('/pawan.jpeg')] bg-cover bg-center group-hover:scale-105 transition-all duration-500"></div>
             <div className='absolute bottom-0 left-0 w-full h-[60%] bg-linear-to-t from-black/90 via-black/70 to-transparent z-10'></div>
             <div className='relative z-20 flex flex-col justify-end px-6 pb-8 text-white space-y-3'>
@@ -69,7 +69,7 @@ export default function Home() {
         </div>
 
         {/* COLUMN 2 */}
-        <div className='w-1/3 h-full flex flex-col gap-4'>
+        <div className='w-full md:w-1/3 h-full flex flex-col gap-4'>
           <Box
             image='/projects/youtube-dashboard.png'
             title='YouTube Insights Dashboard'
@@ -88,15 +88,15 @@ export default function Home() {
         </div>
 
         {/* COLUMN 3 */}
-        <div className='w-1/3 h-full flex flex-col gap-4'>
+        <div className='w-full md:w-1/3 h-full flex flex-col gap-4'>
           <Box
-            image='/projects/gita-gt.png'
+            image='/projects/gita-gpt.png'
             title='Gita GPT'
             description='Verses from Bhagvad Gita organized by emotional states'
             height='70%'
             link='https://gita-gpt-gold.vercel.app/'
           />
-          <div className='relative w-full h-[30%] bg-white rounded-lg hover:rounded-2xl hover:scale-99 flex justify-center items-center transition-all duration-300'>
+          <div className='relative w-full h-[100px] md:h-[30%] bg-white rounded-lg hover:rounded-2xl hover:scale-99 flex justify-center items-center transition-all duration-300'>
             <MumbaiClock />
           </div>
         </div>

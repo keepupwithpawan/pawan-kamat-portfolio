@@ -7,6 +7,7 @@ interface BoxProps {
   title: string;
   description?: string;
   height?: string;
+  phoneHeight?: string;
   link?: string;
   contain?: boolean;
 }
@@ -16,15 +17,16 @@ export default function Box({
   title,
   description,
   height = "50%",
+  phoneHeight = "500px",
   link,
   contain = false,
 }: BoxProps) {
   return (
     <div
       className={`relative w-full rounded-lg hover:rounded-2xl hover:scale-99 overflow-hidden group cursor-pointer transition-all duration-300`}
-      style={{ height }}
+      style={{ height: window.innerWidth <= 1024 ? phoneHeight : height }}
     >
-      {/* ✅ Background Image via inline style */}
+      {/* âœ… Background Image via inline style */}
       <div
         className={`absolute inset-0 transition-transform duration-500 ${
           contain ? "bg-contain bg-no-repeat bg-center bg-black" : "bg-cover bg-center"
