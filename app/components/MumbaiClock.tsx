@@ -25,7 +25,7 @@ export default function MumbaiClock() {
   }, []);
 
   return (
-    <div className="serif-typeface text-2xl uppercase">
+    <div className="serif-typeface text-lg md:text-2xl uppercase">
       MUMBAI, INDIA : {time}
     </div>
   );
