@@ -1,103 +1,106 @@
-import Image from "next/image";
+'use client';
+
+import { motion } from 'motion/react';
+import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import MumbaiClock from './components/MumbaiClock';
+import Box from './components/Box';
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const handleResume = () => {
+    window.open(
+      'https://drive.google.com/file/d/1dvxS1ULN_R8i-FgMgltBLCt63PTVTEA5/view?usp=drive_link',
+      '_blank',
+    );
+  };
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className='w-full h-screen flex flex-col items-center justify-center'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.3 }}
+        className='w-[92%] h-[88%] flex justify-between gap-4 text-(--color-background)'
+      >
+        {/* COLUMN 1 */}
+        <div className='w-1/3 h-full gap-4 flex flex-col items-center justify-center'>
+          {/* Profile Card (keep custom) */}
+          <div className='w-full h-[60%] relative group rounded-lg overflow-hidden flex flex-col justify-end'>
+            <div className="absolute inset-0 bg-[url('/pawan.jpeg')] bg-cover bg-center group-hover:scale-105 transition-all duration-500"></div>
+            <div className='absolute bottom-0 left-0 w-full h-[60%] bg-linear-to-t from-black/90 via-black/70 to-transparent z-10'></div>
+            <div className='relative z-20 flex flex-col justify-end px-6 pb-8 text-white space-y-3'>
+              <h2 className='text-4xl font-light serif-typeface'>
+                Pawan Kamat
+              </h2>
+              <p className='text-lg text-(--color-foreground)/70 font-light'>
+                Currently working as a Junior Software Developer at uKnowva
+                HRMS. Also leading Front End at Gradii.
+              </p>
+
+              <div className='flex items-center justify-between mt-4'>
+                <div className='flex items-center gap-4'>
+                  <a href='https://github.com/keepupwithpawan' target='_blank'>
+                    <FaGithub className='text-2xl hover:text-gray-300' />
+                  </a>
+                  <a href='https://linkedin.com/in/pawankamat' target='_blank'>
+                    <FaLinkedin className='text-2xl hover:text-gray-300' />
+                  </a>
+                  <a href='https://x.com/keepupwithpa1' target='_blank'>
+                    <FaTwitter className='text-2xl hover:text-gray-300' />
+                  </a>
+                </div>
+                <button
+                  onClick={handleResume}
+                  className='px-5 py-2 border border-(--color-foreground) rounded-lg hover:rounded-[60px] transition-all duration-400 font-light cursor-pointer'
+                >
+                  View Resume
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Reusable Card */}
+          <Box
+            image='/projects/breather.png'
+            title='Breather'
+            description='4-7-8 Pranayama Yoga and other productivity tools'
+            height='40%'
+            link='https://breather-29161.web.app/'
+          />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+
+        {/* COLUMN 2 */}
+        <div className='w-1/3 h-full flex flex-col gap-4'>
+          <Box
+            image='/projects/youtube-dashboard.png'
+            title='YouTube Insights Dashboard'
+            description='Data-rich analytics from playlists & channels'
+            height='40%'
+            link='https://youtube-playlist-dashboard.vercel.app/'
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <Box
+            image='/projects/vetra.png'
+            title='Vetra'
+            description='A Pinterest alternative for developers'
+            height='60%'
+            link='https://www.vetra.co.in'
+            contain
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </div>
+
+        {/* COLUMN 3 */}
+        <div className='w-1/3 h-full flex flex-col gap-4'>
+          <Box
+            image='/projects/gita-gt.png'
+            title='Gita GPT'
+            description='Verses from Bhagvad Gita organized by emotional states'
+            height='70%'
+            link='https://gita-gpt-gold.vercel.app/'
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div className='relative w-full h-[30%] bg-white rounded-lg hover:rounded-2xl hover:scale-99 flex justify-center items-center transition-all duration-300'>
+            <MumbaiClock />
+          </div>
+        </div>
+      </motion.div>
     </div>
   );
 }
