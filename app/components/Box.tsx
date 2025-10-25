@@ -36,7 +36,7 @@ export default function Box({
 
   return (
     <div
-      className="relative w-full rounded-lg hover:rounded-2xl overflow-hidden cursor-pointer"
+      className="relative w-full rounded-lg hover:rounded-2xl hover:scale-99 transition-all duration-300 overflow-hidden cursor-pointer"
       style={{ height: boxHeight }}
     >
       {/* Background Image */}
