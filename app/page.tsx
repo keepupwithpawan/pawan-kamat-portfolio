@@ -171,7 +171,7 @@ export default function Home() {
         <div id='projects' className='w-full mx-auto'>
           {/* <h3 className='text-lg mb-4'>Projects</h3> */}
 
-          <div className='w-full grid grid-cols-2 grid-rows-1 gap-4'>
+          <div className='w-full grid grid-cols-1 md:grid-cols-2 gap-4'>
             {/* Vetra */}
             <div
               onClick={() => window.open('https://www.vetra.co.in/', '_blank')}
