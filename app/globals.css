@@ -1,26 +1,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap');
 @import "tailwindcss";
 
+/* Local Helvetica font */
+@font-face {
+  font-family: 'HelveticaCustom';
+  src: url('/fonts/Helvetica.ttf') format('truetype');
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --accent: #a173ff;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: 'HelveticaCustom', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #171717;
-    --foreground: #ffffff;
-  }
+html.dark {
+  --background: #171717;
+  --foreground: #ffffff;
 }
+
+/* Smooth theme transition */
+*,
+*::before,
+*::after {
+  transition:
+    background-color 300ms ease,
+    color 300ms ease,
+    border-color 300ms ease,
+    fill 300ms ease,
+    stroke 300ms ease;
+}
+
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Inter";
+  font-family: var(--font-sans);
+}
+
+
+.accent {
+  color: var(--accent);
+}
+
+.accentbg {
+  background-color: var(--accent);
 }
 
 .serif-typeface {
