@@ -93,7 +93,7 @@ export default function Home() {
             <div className='w-full space-y-4'>
               <div className='flex justify-between items-center'>
                 <h3 className='text-2xl'>
-                  Hi, I'm <span className='accent'>Pawan</span> (pa-one).
+                  Hi, I&apos;m <span className='accent'>Pawan</span> (pa-one).
                 </h3>
                 <a href='https://drive.google.com/file/d/1dvxS1ULN_R8i-FgMgltBLCt63PTVTEA5/view'>
                   <p className='px-3 py-1 accentbg rounded-full text-sm text-white hover:opacity-60 transition-all duration-300 cursor-pointer'>
