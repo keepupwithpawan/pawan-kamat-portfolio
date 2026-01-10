@@ -93,9 +93,10 @@ export default function Home() {
             <div className='w-full space-y-4'>
               <div className='flex justify-between items-center'>
                 <h3 className='text-2xl'>
-                  Hi, I&apos;m <span className='accent'>Pawan</span> (pa&#8209;one).
+                  Hi, I&apos;m <span className='accent'>Pawan</span>{' '}
+                  (pa&#8209;one).
                 </h3>
-                <a href='https://drive.google.com/file/d/1dvxS1ULN_R8i-FgMgltBLCt63PTVTEA5/view'>
+                <a href='https://drive.google.com/file/d/1Bl158VkY3ojBc_chmrDoBqSrevlOio_K/view?usp=sharing'>
                   <p className='px-3 py-1 accentbg rounded-full text-sm text-white hover:opacity-60 transition-all duration-300 cursor-pointer'>
                     Resume
                   </p>
@@ -347,7 +348,11 @@ export default function Home() {
 
           <div className='flex items-center gap-8'>
             <a href='https://github.com/keepupwithpawan'>
-              <GitHub width={18} height={18} className='text-[color:var(--foreground)] ' />
+              <GitHub
+                width={18}
+                height={18}
+                className='text-[color:var(--foreground)] '
+              />
             </a>
             <a href='https://www.linkedin.com/in/pawankamat/'>
               <LinkedIn width={18} height={18} />
